@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - DigitalODS: El Arte del Cambio - Sesión 1</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #2196F3; color: white; text-align: center; padding: 10px; } /* Blue Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #2196F3; /* Blue Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        /* Remove dropdown styles if selector is removed */
+        /* .dropdown { margin-bottom: 20px; } */
+        /* .dropdown select { font-size: 1em; padding: 5px; } */
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;} /* Style for static title */
+    </style>
+    <script>
+        // updateActivities function might be kept for potential future use or removed if definitely not needed.
+        // function updateActivities() { } // Keep empty or remove
+
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                content.style.display = content.style.display === "none" ? "block" : "none";
+            }
+        }
+
+        // Initialize content hidden state on load
+        window.onload = () => {
+             // Ensure all content starts hidden
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Taller: DigitalODS: El Arte del Cambio (2º Primaria) - Sesión 1</h1>
+    </div>
+    <div class="container">
+        <!-- Removed Dropdown and Dynamic Time Title -->
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2> <!-- Static Title -->
+
+        <!-- De un Vistazo y Preparación Previa -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('activity_0_content')">
+                <div class="title">📝 De un Vistazo: Sesión 1</div>
+            </div>
+            <div id="activity_0_content" class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivos:</strong>
+                            <ul>
+                                <li>Presentar el taller, la receta y el objetivo final (prototipo de arte interactivo ODS).</li>
+                                <li>Formar equipos colaborativos.</li>
+                                <li>Introducir el "Código del Innovador" para el trabajo en equipo.</li>
+                                <li>Conectar el taller con los conocimientos previos de Scratch.</li>
+                                <li>Introducir los ODS y seleccionar un enfoque ambiental inicial.</li>
+                                <li>Despertar la creatividad con ejemplos inspiradores y una actividad de dibujo inicial.</li>
+                                <li>Comenzar a generar ideas visuales sobre el ODS elegido.</li>
+                            </ul>
+                            <strong>💡 Tácticas Principales:</strong> Invent an Animal (Adaptado: "Ayudante Tierra"), Mind Map (Guiado - Inicio).
+                            <br><br>
+                            <strong>🔑 Entregable Clave:</strong> Equipos formados, inicio de Mind Map por equipo sobre un ODS ambiental.
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🛠️ Materiales Específicos:</strong>
+                            <ul>
+                                <li>Proyector o pantalla interactiva.</li>
+                                <li>Presentación de diapositivas (Diapositivas 1-12 detalladas abajo).</li>
+                                <li>Acceso a tablero Miro (o similar) preparado con secciones para cada equipo, o rotafolios/papel grande por equipo.</li>
+                                <li>Marcadores o herramientas de dibujo digital.</li>
+                                <li>Hojas blancas y lápices/colores (para Táctica 1).</li>
+                                <li>Iconos/Imágenes de los ODS (especialmente los ambientales: 13, 14, 15).</li>
+                                <li>Ejemplos "Shots de Inspiración" (Diapositivas 8-11).</li>
+                            </ul>
+                             <strong>🔧 Preparación Previa para ESTA Sesión:</strong>
+                            <ol>
+                                <li><strong>Presentación Lista:</strong> Tener listas las Diapositivas 1 a 12 con los títulos, guiones e imágenes/referencias sugeridas. Asegurarse de que las imágenes de los ODS y los "Shots de Inspiración" sean claras y apropiadas.</li>
+                                <li><strong>Tablero Digital/Físico:</strong> Preparar el espacio en Miro (o rotafolios) con un área designada para cada equipo. Incluir una sección inicial para el "Mind Map".</li>
+                                <li><strong>Materiales Físicos:</strong> Tener hojas blancas y materiales de dibujo listos para la Táctica 1.</li>
+                                <li><strong>Conexión Scratch:</strong> Revisar brevemente qué proyectos clave de Scratch hicieron los alumnos durante el año para referenciarlos en el Framing.</li>
+                                <li><strong>Código Innovador:</strong> Adaptar el texto del "Código del Innovador" (versión Primaria) enfocándolo en colaboración, respeto por las ideas, y creatividad para el arte digital.</li>
+                                <li><strong>Ejemplos VoC:</strong> Tener listos los textos de los ejemplos de "Lúmina" y del "Mind Map de Voices for Change" para referenciar en las láminas correspondientes (Diapositivas 9 y 12).</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: Bienvenida y Presentación -->
+        <div id="activity-1" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">👋 Actividad 1: Bienvenida y Presentación del Taller / Introducción Receta ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 1</strong>: "DigitalODS: El Arte del Cambio". Mostrar título con emojis (🎨🌍), un collage visual atractivo (arte digital, Scratch, planeta) y texto introductorio.
+                        </td>
+                        <td>
+                            "¡Hola, artistas digitales y futuros guardianes del planeta! ¡Bienvenidos al increíble taller 'DigitalODS: El Arte del Cambio'! ¿Están listos para usar su imaginación y sus súper poderes de Scratch para crear obras de arte que no solo se vean geniales, sino que también ayuden a la Tierra?"
+                            <br><br>
+                            "Imaginen que son magos del arte digital. En este taller, vamos a usar Scratch, esa herramienta mágica que ya conocen, para crear 'Arte Interactivo'. ¿Qué es eso? ¡Es arte que responde cuando lo tocas o interactúas con él! Y lo mejor de todo: nuestro arte tendrá una misión súper importante: ¡ayudar a resolver problemas de nuestro planeta!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Proyectar la <strong>Diapositiva 2</strong>: "Receta Secreta: ExplorArte Digital". Mostrar título con icono de lupa (🔎) y paleta (🎨), y la lista de 8 tácticas con iconos y frases cortas.
+                        </td>
+                        <td>
+                             "Para guiarnos en esta aventura creativa, usaremos una 'receta mágica' llamada 'ExplorArte Digital'. ¡Miren estos son los pasos secretos que seguiremos!"
+                             <br><br>
+                             <em>(Señalar la lista en la diapositiva)</em>
+                             <br><br>
+                            "¡Estos son nuestros 8 pasos! Cada uno nos ayudará a explorar, crear y definir nuestro proyecto. ¡Será una aventura increíble!"
+                             <br><br>
+                             <em>(Leer brevemente los nombres de las tácticas y sus frases motivadoras):</em>
+                             <br>
+                             1. Inventa "Ayudante Tierra": ¡Con esta táctica, despertaremos nuestra imaginación creando un ayudante mágico!
+                             <br>
+                             2. Lluvia Ideas Visual (Mind Map): ¡Con esta táctica, exploraremos nuestro problema con dibujos e ideas conectadas!
+                             <br>
+                             3. 8 Bocetos de Arte Rápido (Crazy Eights): ¡Con esta táctica, dibujaremos 8 ideas geniales súper rápido, como un rayo creativo!
+                             <br>
+                             4. Vota por tu Favorito (Invest your mon-e): ¡Con esta táctica, elegiremos nuestra idea más brillante con una estrella dorada!
+                             <br>
+                             5. ¿Qué Pasa Si...? (Back and Forth): ¡Con esta táctica, descubriremos cómo nuestro arte cobrará vida preguntando y respondiendo!
+                             <br>
+                             6. Mi Arte en Acción (Storyboard): ¡Con esta táctica, contaremos la historia de nuestro arte interactivo en 3 dibujos!
+                             <br>
+                             7. Mi Prototipo (T-Bar Adaptado): ¡Con esta táctica, crearemos el mapa final de nuestro increíble arte interactivo en papel!
+                             <br>
+                             8. Retro con Superpoderes (Like, Wish, Wonder): ¡Con esta táctica, ayudaremos a otros equipos a mejorar sus ideas con comentarios constructivos!
+                             <br><br>
+                            "¡Estos son nuestros 7+1 pasos secretos para crear Arte Interactivo que cambie el mundo!"
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Formación de Equipos -->
+        <div id="activity-2" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_2_content')">
+                <div class="title">🤝 Actividad 2: Formación de Equipos Innovadores ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Explicar la importancia del trabajo en equipo y dar instrucciones para formar grupos.
+                        </td>
+                        <td>
+                            "¡Muy bien, artistas! Como los grandes creadores, ¡trabajaremos en equipo! Vamos a formar nuestros 'Estudios de Arte Digital'. Búsquense entre 3 o 4 compañeros con los que les encante crear, compartir ideas y divertirse. ¡Estos serán sus compañeros de equipo durante todo el taller!"
+                            <br><br>
+                            "Recuerden, en el mundo del arte y la tecnología, ¡la colaboración es clave! Ayúdense, inspírense unos a otros, y juntos crearán cosas asombrosas."
+                             <br><br>
+                            <em>(Instrucciones para formar equipos: por ejemplo, agruparse por cercanía, por afinidad, o asignados por el maestro).</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Confirmar la formación de equipos y celebrar.
+                        </td>
+                        <td>
+                             "¡Perfecto! Ya tenemos nuestros 'Estudios de Arte Digital'. ¡Denle un aplauso a su nuevo equipo!" <em>(Aplaudir).</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Presentación Código del Innovador -->
+        <div id="activity-3" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                 <div class="title">📜 Actividad 3: Presentación Código del Innovador ⏰ Tiempo: 3 minutos</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 3</strong>: "Código del Artista Digital Innovador". Mostrar el título adaptado con iconos (💡🤝💖🎨). Leer los puntos clave del código adaptado para primaria.
+                        </td>
+                        <td>
+                            "Artistas digitales, ¡atención! Todo gran estudio tiene sus reglas de oro para crear magia. Este es nuestro 'Código del Artista Digital Innovador'. Son nuestros principios secretos para trabajar súper bien juntos y hacer arte increíble:"
+                             <br><br>
+                            <em>(Leer los puntos adaptados del Código, por ejemplo: 1. ¡Somos un equipo!: Nos ayudamos y escuchamos. 2. ¡Todas las ideas valen!: Respetamos lo que piensan los demás. 3. ¡Creatividad al poder!: Probamos cosas nuevas sin miedo. 4. ¡Manos a la obra!: Trabajamos con ganas. 5. ¡Cuidamos nuestro planeta!: Nuestro arte ayuda a la Tierra).</em>
+                             <br><br>
+                            "¡Recuerden este código en cada paso de nuestra aventura creativa!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+         <!-- Actividad 4: Framing: Recordando Scratch -->
+        <div id="activity-4" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_4_content')">
+                <div class="title">💻 Actividad 4: Framing: ¡Recordando Scratch! ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_4_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 4</strong>: "¡Nuestros Súper Poderes de Scratch!". Mostrar iconos/imágenes representativas de Scratch (bloques, gato, etc.). Mencionar un proyecto clave que hayan hecho.
+                        </td>
+                        <td>
+                            "Artistas, ¡ustedes ya son unos cracks de Scratch! Este año han aprendido a hacer cosas asombrosas: ¿recuerdan cuando hicieron <em>[mencionar proyecto clave que hicieron, ej: su juego de atrapar frutas, su historia animada del espacio]</em>?"
+                             <br><br>
+                             "Han aprendido a usar bloques de <strong>movimiento</strong>, <strong>apariencia</strong>, <strong>sonidos</strong>, <strong>eventos de clic</strong>... ¡Tienen un montón de súper poderes de programación!"
+                              <br><br>
+                             "En este taller, vamos a usar TODOS esos poderes para darle vida a nuestro 'Arte Interactivo por la Tierra'. ¡Vamos a programar arte que se mueva, que cambie, que suene y que sorprenda!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 5: Introducción ODS -->
+        <div id="activity-5" class="activity" data-time="4">
+            <div class="banner" onclick="toggleContent('activity_5_content')">
+                 <div class="title">🌍 Actividad 5: Introducción: ¿Qué son los ODS? ⏰ Tiempo: 4 minutos</div>
+            </div>
+            <div id="activity_5_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 5</strong>: "Nuestra Misión: ¡Ayudar al Planeta con los ODS!". Mostrar el logo de los ODS y los iconos de los ODS 13, 14 y 15.
+                        </td>
+                        <td>
+                           "¿Saben qué son los ODS? Son los <strong>Objetivos de Desarrollo Sostenible</strong>. ¡Son 17 súper misiones para hacer nuestro planeta un lugar mejor!"
+                            <br><br>
+                            "Hay misiones sobre muchas cosas, ¡pero nosotros nos enfocaremos en las que ayudan a <strong>cuidar nuestro planeta Tierra</strong>! Como proteger el <strong>Agua</strong> (ODS 14), cuidar los <strong>Animales y Plantas</strong> terrestres (ODS 15), y luchar contra el <strong>Cambio Climático</strong> (ODS 13)."
+                            <br><br>
+                            "¡Nuestro arte interactivo ayudará en estas misiones!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+         <!-- Actividad 6: Shots de Inspiración -->
+        <div id="activity-6" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_6_content')">
+                 <div class="title">✨ Actividad 6: "Shots de Inspiración" (Scratch+ODS) ⏰ Tiempo: 3 minutos</div>
+            </div>
+            <div id="activity_6_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 6</strong>: "¡Inspiración! Arte Digital que ya Ayuda al Planeta".
+                            <br><br>
+                            <strong>Paso 2:</strong> Mostrar secuencialmente las <strong>Diapositivas 7, 8, 9 y 10</strong> con los ejemplos, explicando brevemente cada uno de forma adaptada a niños.
+                        </td>
+                        <td>
+                            "¡Miren qué cosas tan geniales ya se están haciendo! Estos son nuestros 'Shots de Inspiración':"
+                            <br><br>
+                            <em>(Mostrar Diapositiva 7 - Voices for Change):</em> "¿Te imaginas que miles de personas de muchos países se unieran para ayudar al planeta? Eso hicieron en este proyecto. Sus voces se juntaron como un gran coro que canta por la Tierra. Usaron arte y tecnología para decir: ¡hay que cuidar el mundo! Porque si todos hablamos con amor por nuestro planeta... ¡el cambio sí es posible!"
+                             <br><br>
+                             <em>(Mostrar Diapositiva 8 - Youth Digital Art):</em> "¡El mar está hablando! Y los niños del mundo lo escucharon. Ellos hicieron arte para defender los océanos de la basura y la contaminación. Pintaron, crearon e imaginaron mundos donde el agua esté limpia y los animales marinos estén felices. Cada obra es como una ola que quiere proteger la vida en el mar. 🌊"
+                             <br><br>
+                            <em>(Mostrar Diapositiva 9 - Reality TBD):</em> "¿Te imaginas que una silla pudiera hablar? En esta obra, una silla, un hombre y una mujer se convierten en algo mágico. La artista Alejandra los pinta de colores brillantes y nos invita a pensar en lo que es justo. ¡Como si la silla se volviera una balanza de la verdad! Aquí, todos pueden ser libres y únicos, sin importar cómo se vean o quiénes sean."
+                            <br><br>
+                            <em>(Mostrar Diapositiva 10 - Unplaned):</em> "Linda nos cuenta cómo su ciudad, en África, ha cambiado muchísimo. Donde antes jugaba de niña, ahora hay muchos edificios y casi no se puede ir a la playa. Su animación es como un mapa secreto que muestra cómo crece la ciudad... ¡pero también cómo debemos cuidarla! Porque las ciudades también necesitan respirar y tener espacio para todos."
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 7: Táctica 1: Inventa "Ayudante Tierra" -->
+        <div id="activity-7" class="activity" data-time="7">
+            <div class="banner" onclick="toggleContent('activity_7_content')">
+                 <div class="title">🦸 Actividad 7: Táctica 1: Inventa "Ayudante Tierra" ⏰ Tiempo: 7 minutos</div>
+            </div>
+            <div id="activity_7_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 11</strong>: "¡Nivel 1! Inventa tu Ayudante de la Tierra". Entregar hojas blancas y lápices/colores.
+                        </td>
+                        <td>
+                             "¡Primer nivel de nuestra receta 'ExplorArte Digital'! Vamos a calentar nuestra imaginación. Tomen una hoja blanca y sus lápices. Tienen 5 minutos para... ¡inventar y dibujar rápidamente un 'Ayudante de la Tierra'!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                           <strong>Paso 2:</strong> Proyectar la <strong>Diapositiva 12</strong>: "Ejemplo con Voices for Change!". Mostrar un dibujo simple de 'Lúmina' (forma de gota/cometa de luz con alas/estelas, ojos simples, líneas de brillo) y explicar su origen. Poner temporizador de 5 minutos.
+                        </td>
+                        <td>
+                             "¡Miren, niños! Cuando los creadores de 'Voices for Change' hicieron esta táctica, se inventaron un 'Ayudante de la Tierra' muy especial. Imaginaron una criatura pequeñita, hecha de pura luz brillante y suave, como una estrella fugaz amigable o una luciérnaga mágica. Decidieron que volaría por todo el mundo buscando las voces de las personas que quieren cuidar el planeta. Cuando encuentra una voz, brilla aún más fuerte para mostrarnos dónde está. ¡La llamaron 'Lúmina'! Y así, ¡dibujaron rápidamente a Lúmina volando y brillando!"
+                              <br><br>
+                            "Tómenlo como inspiración y tienen 5 minutos para crear el suyo. ¡Piensen en un animal, un robot, una criatura mágica... que ayude a la Tierra! Dibújenlo rápido y pónganle un nombre."
+                             <br><br>
+                             <em>(Iniciar temporizador de 5 minutos visible).</em>
+                              <br><br>
+                            "¡Listos, fuera!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3:</strong> Finalizar el tiempo. Circular y animar durante el dibujo. Marcar el entregable.
+                        </td>
+                        <td>
+                            <em>(Mientras dibujan, circular y animar: "¡Qué buena idea!", "Me encanta ese detalle", "¿Cómo ayuda tu ayudante?").</em>
+                            <br><br>
+                            "¡Tiempo! ¡Wow, qué ayudantes tan increíbles han creado! Guarden sus dibujos, ¡nos inspirarán más adelante!"
+                            <br><br>
+                            <em>(Entregable: Dibujo rápido individual del "Ayudante de la Tierra" con nombre en hoja blanca).</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 8: Táctica 3: Lluvia Ideas Visual (Mind Map Guiado - Inicio) -->
+        <div id="activity-8" class="activity" data-time="8">
+            <div class="banner" onclick="toggleContent('activity_8_content')">
+                 <div class="title">🗺️ Actividad 8: Táctica 3: Lluvia Ideas Visual (Mind Map Guiado - Inicio) ⏰ Tiempo: 8 minutos</div>
+            </div>
+            <div id="activity_8_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 13</strong>: "¡Nivel 2! Lluvia de Ideas Visual ODS". Mostrar instrucciones y preguntas guía. Indicar a los equipos que vayan a su espacio de trabajo (Miro/rotafolios).
+                        </td>
+                        <td>
+                            "¡Genial con esos ayudantes! Ahora, ¡siguiente nivel! Vamos a hacer una <strong>Lluvia de Ideas Visual</strong> en equipo. Vayan a su espacio en Miro (o papel grande)."
+                            <br><br>
+                            "Elijan como equipo UNA misión: <strong>Clima</strong>, <strong>Agua</strong> o <strong>Animales/Plantas</strong>."
+                             <br><br>
+                            "Escriban o dibujen ese problema en el CENTRO de su hoja o tablero."
+                             <br><br>
+                            "Ahora, dibujen o escriban rápido todo lo que se les ocurra alrededor. Usen estas preguntas como guía: ¿Qué <strong>VEMOS</strong> relacionado con ese problema? ¿Qué <strong>OÍMOS</strong>? ¿Qué podemos <strong>HACER</strong> nosotros para ayudar?"
+                             <br><br>
+                             <em>(Guiar activamente con las preguntas. Dar tiempo para que elijan ODS y empiecen a dibujar/escribir ideas iniciales. Circular y apoyar).</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Proyectar la <strong>Diapositiva 14</strong>: "¡Como el Mapa de Voices for Change!". Mostrar un ejemplo visual de Mind Map (puede ser el descrito para VoC) y guiar con ejemplos concretos relacionados con el clima.
+                        </td>
+                        <td>
+                            "Miren este ejemplo, ¡así podría ser su mapa! Si eligieron <strong>Clima</strong>, ¿qué vemos?"
+                            <br>
+                            "¡La Tierra!" <em>(Dibuja un círculo azul y verde).</em>
+                            <br>
+                            "Naturaleza... árboles, montañas, agua." <em>(Dibuja elementos simples).</em>
+                            <br>
+                             "Animales... quizás algunos que necesitan ayuda." <em>(Dibuja un oso polar, una tortuga).</em>
+                             <br>
+                             "Lugares... ciudades, bosques, océanos." <em>(Dibuja siluetas simples).</em>
+                             <br>
+                             "¡Luces! Como las voces que queremos mostrar." <em>(Dibuja chispas o puntos de luz).</em>
+                             <br>
+                             "¿Quizás formas geométricas simples para que se vea como 'low-poly'?" <em>(Dibuja triángulos, polígonos).</em>
+                             <br><br>
+                             "¿Qué oímos en este mundo?"
+                             <br>
+                             "¡Voces de personas!" <em>(Dibuja una nube de diálogo).</em> "Muchas voces, de niños, de adultos..."
+                             <br>
+                            "Sonidos de la naturaleza... viento, agua, animales." <em>(Dibuja una nota musical cerca de los elementos naturales).</em>
+                             <br>
+                            "Quizás música suave, esperanzadora." <em>(Dibuja más notas musicales).</em>
+                            <br>
+                             "¿Tal vez sonidos tristes si algo está mal?" <em>(Dibuja una nota musical rota).</em>
+                            <br><br>
+                             "¿Qué hacemos nosotros en este mundo?"
+                             <br>
+                             "¡Viajar! Movernos por él." <em>(Dibuja flechas o un camino).</em>
+                             <br>
+                             "Explorar, descubrir." <em>(Dibuja una lupa).</em>
+                             <br>
+                             "Escuchar las voces." <em>(Dibuja una oreja cerca de las luces/voces).</em>
+                             <br>
+                            "Aprender sobre los ODS." <em>(Dibuja un libro abierto o un signo de interrogación).</em>
+                             <br>
+                             "¿Quizás 'recolectar' las voces o las luces?" <em>(Dibuja una mano alcanzando una luz).</em>
+                              <br><br>
+                            "¡Sigan añadiendo ideas a su mapa! No tienen que ser perfectas, ¡solo pongan todo lo que se les ocurra! Tienen unos minutos más."
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                           <strong>Paso 3:</strong> Concluir la actividad. Marcar el entregable.
+                        </td>
+                        <td>
+                             "¡Tiempo! ¡Muy bien equipos! Han dado el primer paso para explorar su misión."
+                            <br><br>
+                             <em>(Entregable: Inicio de Mind Map por equipo (digital o físico) con el ODS/problema central y algunas ideas/dibujos iniciales en las ramas).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 4:</strong> Transición a la siguiente sesión.
+                        </td>
+                         <td>
+                            "¡Wow, artistas! ¡Han empezado a llenar sus mapas con ideas increíbles! ¡La Sesión 1 ha sido un despegue creativo espectacular!"
+                            <br><br>
+                            "Dejen sus Mind Maps listos. En la próxima sesión, vamos a completarlos y luego... ¡nos convertiremos en máquinas de dibujar ideas súper rápidas con 'Crazy Eights'! ¡Prepárense para dibujar 8 ideas de arte interactivo en tiempo récord!"
+                            <br><br>
+                            "¡Gran trabajo hoy! ¡Nos vemos en la Sesión 2 para más 'ExplorArte Digital'!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
